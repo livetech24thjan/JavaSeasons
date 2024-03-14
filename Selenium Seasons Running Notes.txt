@@ -1,0 +1,2237 @@
+
+JAVA SEASON - 1
+-----------------------------------------------------
+Day 1: 19th Jan - Friday
+-----------------------------------------------------
+
+Features of Java : 
+
+1. Simple 
+
+- syntax is similar to c++
+- removed confusing concepts like explicit pointers, operator overloading 
+
++ - * /  % 
+
+2 + 5 = 7
+
+
++ used for power now 
+
+2 + 5  = 32 
+
+- mallaoc , dealloc for memory managment 
+  in java GC (garbage collector)
+  
+----------------------------------------------
+2. OO object oriented programming 
+
+it's a methodology for development and maintenance of applications.
+Below are the concepts adopted by OOP's languages (like JAVA , Pyhton , .net etc ..)
+Class
+Object
+1)Encapsulation
+2)Polymorphism
+3)Inheritance
+4)Abstraction
+
+-----------------------------------------------------
+
+3. Robust (Strong)
+
+- good memomry management (beacuse of GC )
+- no pointers , no security problems
+- Exception Handling mechanism 
+
+int x=10;
+
+int y=20;
+
+String z="FLM";
+
+int a=x+y+z;
+
+----------------------------------------------------
+
+4. Secure 
+
+.exe are applications which can be attacked by virus 
+
+------------------------------------------------------
+5. Platform Independent
+
+Platform means OS 
+
+6. Architectural Neutral
+
+Architecture means Micro processor and RAM 
+
+7. Portablity 
+
+Portables means Architecture (core Structure) 
+
+IBM , Apple , Solaris 
+
+
+WORA - Write Once Run Anywhere 
+
+============================================
+JDK installation
+
+
+https://www.oracle.com/java/technologies/downloads/
+
+
+JDK 11 
+
+jdk-11.0.22_windows-x64_bin.exe
+
+
+
+
+----------------------------------------------------
+Day 2: 23rd Jan - Tuesday
+-----------------------------------------------------
+
+configuraion of jdk :
+
+to tell OS (operatoring system) where the software(programs) 
+
+by means of environment variables 
+
+JAVA_HOME C:\Program Files\Java\jdk-11
+
+path C:\Program Files\Java\jdk-11\bin
+
+
+--------------------------------------------------------------
+
+jdk folders :
+
+								jdk 
+								
+								
+									
+								
+			lib						bin						jre	
+
+
+lib : Library
+
+predefined java stuff for development of java applications
+
+	Library              --   jars (~ zip folders)
+								|
+							packages ( ~ folders)
+							    |
+						-------------------
+						|					|
+					classes					Interfaces
+						|						|
+			 variables    Methods	     Constants		Abstract Methods	
+							             or Fields
+										 
+										 
+										 
+bin / tools : 
+
+javac to compile a java program   ( .java file to .class file )
+
+
+syntax : 
+
+javac FileName.java 
+
+
+
+java to run a compiled java file 		
+
+syntax: 
+
+java FileName 			
+						
+
+----------------------------------------------------
+Day 3: 24th Jan - Wednesday
+-----------------------------------------------------
+
+
+JRE (Java Runtime Environment)
+
+
+
+ .class file  ==> Machine Understandable code 
+					.exe 
+					
+					
+									JVM (Java Virtual Machine)
+									
+									
+					--------------------------------------------
+					|					|						|
+					CLSS				EE 						GC
+					Class				Execution				Garbage
+					Loader				Engine					Collector
+					Subsystem
+
+
+CLSS : 
+
+- loading
+- linking   called method and calling method 
+- initialization
+
+in C lang :
+
+int x;
+
+printf("%d",x); ==> some garbage value 
+
+
+in Java :
+
+int x;
+
+
+System.out.println(x); ==> 0
+
+
+
+Execution Engine :
+
+1) Interpreter		2) JIT(Just in time ) compiler  ( looping and branching concepts)
+
+Interpreter : 
+
+excute line by line 
+
+Byte Code == Machine code 
+
+
+Garbage Collector :
+
+1) Mark     2)Sweep
+
+Mark : identifies objects or varibales which can be deallocated .
+
+Sweep : deallocate the memory 
+
+System.gc();
+Runtime.gc();
+
+----------------------------------------------------------------
+JAVA MEMORY BLOCKS - 4 Types 
+----------------------------------------------------------------
+1. Class Area / Method Area 
+	- .class files
+	- static variables 
+	- static methods 
+	- static blocks
+2. Heap Area 
+	- Objects 
+	- Arrays 
+3. Java Stack Area (JSA)
+	- local variables or declarations
+	- expressions 
+	- current runing logic/code 
+int x=10;
+
+int y=20;
+
+System.out.println(x+y);
+
+4. String Constant pool Area (SCPA)
+
+String str="FLM";
+
+-----------------------------------------------------------------------
+
+STRUCTURE OF JAVA Program
+-----------------------------------------------------------------------
+
+
+Documentation Section
+
+Package Section
+
+Import Section
+
+Class or Interface Section 
+
+
+Documentation Section : 
+
+comments 
+
+single line comment : 
+
+// lkoiuoiuoiuoiuoiuo
+
+Multi line comments :
+
+/* this is developed by Riyaz
+   developed on 24th Jan
+   reviewed by Shanmuk
+   reviewed on Jan 24th 
+*/
+	
+--------------------------------
+Package Section : 
+
+package is similar to folder (for logical grouping purpose)
+
+syntax :
+
+package package-name;
+
+this should be the first statement in java program;
+
+------------------------------------------------------
+
+import section : 
+
+sytax :
+
+
+import package-name.*;
+
+import package-name.ClassName;
+
+import static package-name.*;
+	
+
+----------------------------------------------------
+Day 4: 25th Jan - Thursday
+-----------------------------------------------------
+
+
+Class or Interface Section 
+
+
+access-specifier modifier class ClassName
+{
+
+//variables 
+
+
+//methods
+
+
+}
+
+access-specifier :  public / protected / private / default(UnSpecified)
+modifier : static / abstract / default(UnSpecified) 
+
+---------------------------------------------------
+NAMING CONVENTION in JAVA 
+---------------------------------------------------
+
+							packages ( ~ folders)
+							    |
+						-------------------
+						|					|
+					classes					Interfaces
+						|						|
+			 variables    Methods	     Constants		Abstract Methods	
+							             or Fields
+										 
+packages : (all lower case)
+
+java.util
+
+regression	
+
+org.openqa.selenium
+
+
+Classes / Interfaces  : 	Title Case 
+
+
+RamaKrishna  
+
+e.g 
+
+Scanner
+
+HashMap
+
+IllegalFormatException 
+
+ValidateLogin
+
+										first word    secondword onwards
+variables or Objects  :  Camel Case  ( lower case +  Title Case         = Camel Case)
+
+
+int x
+
+int netSalary
+
+
+methods or Abstract Methods:  Camel Case 
+
+main( 
+
+nextInt(
+
+switchToWindow(
+										 
+										 
+Constants or Fields : All Upper Case 
+
+int x=10;
+
+double PI=3.14 ;
+
+MAX_LIMIT=10000;
+
+
+------------------------------------------------------
+Variables in Java
+------------------------------------------------------									 
+										 
+Varaible :
+
+a reference for a memory block
+
+-> simplify the expressions 
+-> stores once abd recall anywhere in program 
+
+syntax of variables :
+
+
+access-specifier modifier datatype varibaleName ;  ==> variable declaration
+
+or
+
+access-specifier modifier datatype varibaleName = value ; variable initialization
+
+
+
+										variables 
+								
+								
+				Local					Instance				Static				
+								
+
+
+Local Variable : 
+
+
+def : if we declare a variable inside a method 
+
+when memory is allocated : only when the method is called 
+
+where : Java Stack Area 
+
+calling style : variable name itself
+
+Scope or life time : till the end of method 
+								 
+Note : It is the responsibility of programmer or developer to initialize some value to local variable 
+
+VariablesDemo1.java:17: error: variable y might not have been initialized
+System.out.println(y);
+                   ^
+1 error								 
+
+
+----------------------------------------------------
+Day 5: 26th Jan - Friday
+-----------------------------------------------------
+
+
+Instance Variable:
+
+
+def : if a varibale declared inside a class but outside of method 
+
+when memory is allocated : when we create an object or instance of that class 
+
+where memory is allocated : Heap Area
+
+calling style : objectName.variableName
+
+Scope or life time : till the last usage of object in program 
+
+
+Static Variable : 
+
+def : if a varibale declared inside a class but outside of method having keyword static 
+
+when memory is allocated : during .class file loading 
+
+where memory is allocated : class Area / Method Area 
+
+calling style : ClassName.variableName
+
+Scope or life time : till the end of program 
+
+
+-------------------------------------------
+DATA TYPES in JAVA
+--------------------------------------------
+strongly typed language 
+
+
+
+x=10;
+
+
+						DataTypes
+				
+				
+				
+			primitive(8)						Non-primitive
+													- Arrays
+													- String 
+	boolean			Numeric						    - Objects 
+				
+				
+				
+datatype :
+
+memory size
+
+default value
+
+Range :    for n bits 
+
+				n-1        n-1
+			  -2      to +2   - 1
+
+for e.g 1B 8 bit 
+			  7		  7
+			-2  to + 2 -1 => -128 to +127
+
+wrapper class 
+
+				
+----------------------------------------------
+how to download eclipse 
+
+IDE - Integrated Development Environment
+
+eclipse , IntelliJ Idea , VScode , Net beans 
+
+https://www.eclipse.org/downloads/
+
+click on "Download Packages "
+
+in left hand side under "MORE DOWNLOADS"
+
+click on "Eclipse 2023-06 (4.28)"
+
+under 
+Eclipse IDE for Enterprise Java and Web Developers ==> click "Windows x86_64"
+
+a zip file will get downloaded
+
+extract the zip file 
+
+			
+
+----------------------------------------------------
+Day 6: 27th Jan - Saturday
+-----------------------------------------------------
+
+byte b=128;
+
+Type mismatch: cannot convert from int to byte
+
+
+int i=2147483648;
+
+The literal 2147483648 of type int is out of range 
+
+----------------------------------------------------
+Day 7: 29th Jan - Monday
+-----------------------------------------------------
+
+operators in java :
+
+operator is a special symbol which performs particular operation 
+
+							
+								operators
+							
+							
+			unary					binary						ternary				
+							
+
+
+operand : some value or variable name 						
+							
+unary :  ===> models 
+
+		post 			pre
+
+	++     --        ++      --						
+	
+int x=20;
+
+
+Binary operators :
+
+- arithmetic  /mathematical
+
++ -  *  
+
+/  (quotient after division)
+
+% Modulus (remainder after division)
+
+- relational operator  ==> comparision between 2 things ==> o/p will be always boolean value 
+
+>  <  >=   <=   ==   !=
+
+- logical operators  ==> b/n two comparisions 
+
+&&  AND
+
+|| OR  piping symbol 
+
+! NOT 
+
+- bitwise operators
+
+&    |      ~   		^     >>     	 <<    >>>
+
+AND  OR    Negation		XOR	  Right 	Left   unary
+							  shift		shift  right shift
+							  
+- assignment operators
+
+
+
+----------------------------------------------------
+Day 8: 30th Jan - Tuesday
+-----------------------------------------------------
+
+- assignment operators  
+
+short hand or short circuit 
+
++= -= *= /= %= >>=  <<=
+
+
+
+ternary operators : conditional operator 
+
+decission maming operator 
+
+? : 
+
+syntax :
+
+			expr1 		? 		expr2 		: 		expr3 
+			
+			condition			True part			false part
+			or							
+			comparision
+			
+
+--------------------------------------------			
+
+contcate operator :
+
++ 
+
+"RAMA"+"RAO" = "RAMARAO"
+
+"Apple"+123=
+
+--------------------------------------------
+
+Member operator => to represent members / methods of a class or object 
+
+	. 
+	
+
+--------------------------------------------
+
+this operator 
+
+--------------------------------------------	
+
+new operator 
+
+
+--------------------------------------------
+
+instanceOf operator 
+
+---------------------------------
+METHODS IN JAVA
+*********************************
+
+- Set of instructions or statements 
+
+- it performs some task 
+
+				methods								methods
+			
+	non-static			static			 predefined				userdefined 
+			
+			
+advantages :
+
+- reusability
+- code clarity 
+- avoids code redundancy
+- length of code reduces
+- easy debugging of program 
+
+syntax :
+
+[access-specifier] [modifier] return-type method-name([arguments or paramters]) [throw list of Exceptions]
+{
+
+local declarations
+statements
+return statement;  ==> should be there except when return type is void 
+
+}			
+
+
+non-static methods :
+
+
+def : any method declared without static keyword ( unspecified<default>/ final / abstract / transient / volatile/strictfp ..  )
+
+when memory is allocated :  while creation of object 
+
+where memory is allocated : Heap Area 
+
+calling style : objectName.methodName
+
+Scope or life time :  till the last usage of object 
+
+
+
+----------------------------------------------------
+Day 9: 31st Jan - Wednesday
+-----------------------------------------------------
+
+
+static methods :
+
+
+def : any method declared with static keyword 
+
+when memory is allocated :  during .class file loading 
+
+where memory is allocated : Class Area /Method Area
+
+calling style : ClassName.methodName
+
+Scope or life time :  till the end of program
+
+
+------------------------------------------------
+Method Signature : 
+
+is description of method , which includes method-name and paramters list 
+
+method-name([arguments or paramters])
+
+
+Method prototype :
+
+is description of method , which includes access-specifier/modifiers list ,return-type,method-name,paramters list and exception list
+
+[access-specifier] [modifier] return-type method-name([arguments or paramters]) [throw list of Exceptions]
+
+----------------------------------------------------------------
+
+***********************************
+OOPs - Object Oriented Programming 
+************************************
+
+POP - procedure oriented programming ( BASIC , FORTAN , COBOL , c ..)
+
+
+Object : 
+
+object is anything that exists 
+
+e.g : Marker , Pen , Fan , Man , Dog ,  bank account number 
+
+3 characteristics 
+
+
+State : data or attributes that represent an object 
+
+for e.g : Marker ( color , shape , length etc ..)
+
+for e.g : Dog ( breed , gender , color etc .. )
+
+for e.g : Bank Account number ( no of digits = 13 digits , bank name , ISFC code etc..)
+
+those are nothing but variables 
+
+
+Behaviour :  represents the operations/tasks performed by an object 
+
+for e.g : Marker ( writing on white board, marking something on parcel etc ..)
+
+for e.g : Dog ( barking ,eating ,sleeping ..)
+
+for e.g : Bank Account number ( transfer , deposit etc..)
+
+
+those are nothing but methods 
+
+Identity : Unique ID used by JVM to keep track of Object .
+
+------------------------------------------------------
+Class : 
+
+is a blueprit or template from which you can create an object/s .
+
+It's a logical entity .
+
+class syntax :
+
+[access-specifier] [modifier] class ClassName
+{
+
+//variables 
+
+//methods
+
+
+}
+
+===========================================
+Object Creation Techniques
+===========================================
+
+1) using new operator 
+
+ClassName objectName=new ClassName();
+
+2) using Static Factory Method (SFM)
+
+ClassName objectName=ClassName.method-name();
+
+3) using non-Static Factory Method (NSFM)
+
+when object of ClassName2 depends on Object of ClassName1
+
+ClassName1 object1=new ClassName1();
+
+ClassName2 object2=object1.method-name();
+
+XSSFWorkbook   getSheet():XSSFSheet
+
+          XSSFSheet
+
+
+XSSFWorkbook wb=new XSSFWorkbook();
+XSSFSheet ws=wb.getSheet();
+
+
+4) using cloning 
+
+ClassName object1=new ClassName();
+
+ClassName object2=object1.clone();
+
+5) using literals 
+
+ClassName object = value ; 
+
+used for String , Wrapper classes 
+
+String str="FLM";
+
+6) using deserialization 
+   no syntax 
+   implicit operation used by JVM 
+   
+????????????????????????????????????????????
+Assignment 
+
+Q : write a program using methods to calcuate Simple Interest
+where you need to pass values ( p , t, r)
+
+hint : SI = P*T*R/100;
+
+
+
+
+----------------------------------------------------
+Day 10 : 1st Feb - Thursday
+-----------------------------------------------------
+
+**********************
+Encapsulation
+**********************
+
+Encapsulation in Java is a mechanism of wrapping the data (variables) and
+ code acting on the data (methods) together as a single unit or entity.
+
+
+Encapsulation = Data hiding + Abstraction 
+
+The field Bank.balance is not visible
+
+----------------------------------------------------
+Day 11 : 5th Feb - Monday
+-----------------------------------------------------
+
+Getters : the method to retrive/read the data present in a class 
+
+these methods will have  a prefix "get"
+
+Setters : the method to modify/write the data present in a class 
+
+these methods will have  a prefix "set"
+
+????????????????????????????????????????????????????
+WAP to create a class called Clock ? 
+
+which has 3 varibales (hr,min,sec) 
+
+use getters and setters 
+
+7:16:55
+
+
+PrintStream :
+
+
+println : this will print and takes the cursor to next line 
+
+print : this will print and  the cursor stays in same line 
+
+* * * * *
+* * * *
+* * *
+* *
+*
+
+
+printf : for formatting any string related things and cursor stays in same line 
+
+format : for formatting any string related things and cursor stays in same line 
+
+????????????????????????????????????????????????????
+Assignment 
+??????????????????????????????????????????????????
+
+WAP to create a class called DateOfBirth ? 
+
+which has 3 varibales (int day,String month,int year) 
+
+use getters and setters to print your date of birth
+
+DD-Mon-YYYY
+
+
+
+?????????????????????????????????????????????????????
+
+
+===========================================
+this : 
+
+is a keyword cum operator used to represent current calling object reference .
+
+-------------------------------------------------------------------------
+
+
+The method add(int, int) in the type Sum is not applicable for the arguments (double, double)
+
+The method add(int, int) in the type Sum is not applicable for the arguments (long, long)
+
+
+
+----------------------------------------------------
+Day 12 : 6th Feb - Tuesday
+-----------------------------------------------------
+
+Polymorphism : 
+
+it's a greek word 
+
+
+poly means many
+morph means forms or structure 
+
+								Polymorphism
+								
+								
+					Static						Dynamic
+
+					 or							or
+					 
+					Compile time				runtime
+					
+						or 						 or
+					Early binding				Late binding 
+						
+								
+why this names compile time and runtime ?
+
+binding or linking ==> linking of called and caller method will happen during compile time for method overloading 
+								
+								
+								
+Method Overloading :
+
+same method name having different signatures in Same Class 
+
+
+how to Method overload  :---->  differnce in datatypes 
+							add(int,int)
+							add(double,double)
+							add(long,long)
+
+						:---->  Show variance in number of arguments
+						add(int,int)
+						add(int,int,int)
+						
+						:----> change in order of arguments (Not prefered) 
+						
+						setDetails(int rollNo,String sNa)
+						setDetails(String sNa,int rollNo)
+								
+								
+
+????????????????????????????????????????????????????
+Assignment 
+??????????????????????????????????????????????????
+
+WAP to generate an Aadhar number  using method overloading ?
+
+use either Pan card or Passport or voter id 
+
+4256 0123 1799
+
+hint : System.out.println((int)(Math.random()*10000));
+
+?????????????????????????????????????????????????????								
+								
+Constructor : 
+
+It's a method having same name as ClassName .
+
+rules or precautions :
+
+1) Constructor name must match with ClassName 
+2) Constructor can take arguments but doesn't return any value 
+
+interview Q : what happens if we write a return type ?	
+Ans : no error ..it will be treated as normal method or concrete method (NO more used as Constructor)
+
+3) Constructor shoudn't have modifier 
+interview Q : what happens if we write a modifier (static , abstarct etc..)?	
+Ans : Compile time error 
+Illegal modifier for the constructor in type Clock; only public, protected & private are permitted
+
+4) use access-specifier  public or protected 	(prefered)
+						 private or <default>  (not prefered)
+						 
+								
+----------------------------------------------------
+Day 12 : 7th Feb - Wednesday
+-----------------------------------------------------
+								
+Inheritance : 
+
+Class B extends A 		
+
+single
+multi level
+heirarchal
+Multiple
+Hybrid 						
+								
+								
+----------------------------------------------------
+Day 13 : 8th Feb - Thursday
+-----------------------------------------------------
+				
+
+Object is root class for all classes 
+
+----------------------------
+Method Overriding
+----------------------------
+
+The process of providing replacement for existed method functionality with some new functionality 
+is called Method Overriding.
+
+-› To perform Method overriding, we have to use the following steps.
+
+1. Declare a method in super class which we want to override. [Old Functionality]
+
+2. Declare the same method with different functionality in sub class. [New Functionality]
+
+-› In Method Overriding, we must provide same method prototype for both super class method
+and sub class method, where method prototype includes access modifiers list, return types,
+method name, aparamjeter list and throws exception list.
+
+-> In Java, apflications, method overriding required "Inheritance"
+
+Case-1:
+P obj = new P();
+obj.m1() ;
+Status: Invalid, where Method overriding was not happend, because, Method Overriding
+required sub class object, not super class Object.
+
+
+Case-2:
+C obj = new C();
+obj.m1() ;
+Status: Method Overriding was happened, but, to prove method overriding we must access super
+class method and we have to get output from sub class method, to achieve this we need super
+class reference variable, not sub class reference variable,
+
+Case-3:
+P a = new C();
+obj.m1() ;
+O/P: New Functionality.
+Status: Method Overriding was Happed and we can prove method overriding.
+
+Method Overhiding : 
+Method overriding,either super class method or sub class method or both super class
+and sub class methods must not be declared as static, if we declare either super class method
+or sub class method as static then compiler will raise an error, if we declare both super
+class and sub class methods.as static then compiler will not raise any error, where method
+overriding will not be performed at runtime , where Super class method overhides sub class
+method, this feature is called as "Method Overhiding"
+
+
+Super :
+
+is a keyowrd cum operator used to refer current calling object/class parent reference
+				
+							
+----------------------------------------------------
+Day 14 : 8th Feb - Friday
+-----------------------------------------------------
+					
+					
+Abstraction: 					
+
+							Abstraction
+							
+							
+			Abstract Class 					Interfaces 
+
+			0 to 100 %  abstarction				100% abstarction
+			
+							
+							
+**************************************************************************
+Selenium Season -1 
+**************************************************************************
+
+https://www.selenium.dev/
+
+latest release  ( not prefered because it may not be stable)
+
+Selenium 4.17 Released!
+Tuesday, January 23, 2024
+
+
+https://www.selenium.dev/downloads/ 
+
+Previous Releases
+Here you can find a more complete list of Selenium releases.
+
+in older projects(2 to 3 years back )
+most widely used version is selenium 3.141.59.jar
+
+now-a-days used version : 
+
+selenium-server-4.12.1.jar
+
+
+
+how to add any jar to eclipse Java project ?
+
+right click on project -> go to build path -> configure build path --> click on Libraries tab --> 
+click on classpath --> click on Add exteernal jars button -> choose the jar from the location where you have downloaded 
+-> Click open -> apply -->apply and close 
+
+Now you see the jars under 
+Referenced Libraries in the project 
+						
+							
+----------------------------------------------------
+Day 15 : 12th Feb - Monday
+-----------------------------------------------------
+									
+									
+Browser Launching : 
+
+Chrome is up to date
+Version 121.0.6167.161 (Official Build) (64-bit)
+
+Selenium 3.141.59
+
+Exception in thread "main" java.lang.IllegalStateException:
+ The path to the driver executable must be set by the 
+ webdriver.chrome.driver system property;
+ for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. 
+ The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
+
+ The path to the driver executable must be set by the 
+ webdriver.gecko.driver system property; 
+ for more information, see https://github.com/mozilla/geckodriver.
+ The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+		
+
+https://chromedriver.chromium.org/downloads
+
+https://googlechromelabs.github.io/chrome-for-testing/
+
+		
+Reason : 
+
+Browser's can't understand java/python/ruby etc , they need some executable file 
+which converts the lang to JSON(Java Script Object Notation) format
+
+Solution : 									
+
+need to download corresponding .exe file compatabile with browser version 									
+									
+									
+https://github.com/bonigarcia/webdrivermanager
+
+webdrivermanager-5.6.3
+Latest									
+									
+-------------------------------------------------
+Methods in WebDriver (13  methods and 5 sub interfaces)
+--------------------------------------------------
+
+close()
+findElement(By)
+findElements(By)
+get(String)
+getCurrentUrl()
+getPageSource()
+getTitle()
+getWindowHandle()
+getWindowHandles()
+manage()
+navigate()
+quit()
+switchTo()									
+
+org.openqa.selenium.WebDriver.Navigation
+org.openqa.selenium.WebDriver.Options
+org.openqa.selenium.WebDriver.TargetLocator
+org.openqa.selenium.WebDriver.Timeouts
+org.openqa.selenium.WebDriver.Window
+
+
+3 things to be remembers while using any method in java 
+
+1) what is the return type of method
+2) what arguments or paramters the method is taking
+3) over all what does this method do ?
+
+-----------------
+close():
+-----------------
+
+get(String):void 
+
+					
+							
+----------------------------------------------------
+Day 16 : 13th Feb - Tuesday
+-----------------------------------------------------
+
+ead "main" java.lang.IllegalStateException: 
+The path to the driver executable must be set by the 
+webdriver.gecko.driver
+ system property; for more information,
+ see https://github.com/mozilla/geckodriver. 
+ The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+	at com.goog
+	
+	
+Exception in thread "main" java.lang.IllegalStateException: 
+ path to the driver executable must be set by the 
+ webdriver.edge.driver 
+ system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/MicrosoftWebDriver. The latest version can be downloaded from http://go.microsoft.com/fwlink/?LinkId=619687
+	
+	
+	
+	
+-------------------------------------------------
+Methods in WebDriver (13  methods and 5 sub interfaces)
+--------------------------------------------------	
+
+close():void ==> this will close window or tab on which webdriver focus is
+				==> this will not kill the chromedriver.exe 
+quit():void ==> will close all tabs or windows opened during the session 
+				==> this will kill the chromedriver.exe  
+				
+get(String):void ==> this will launch the app whose URL is given as String 
+
+getTitle():String ==> this will return the web page title in form of String 
+
+getCurrentUrl():String ==> this will return the url present in address bar 
+
+getPageSource():String ==> this will return the html code of the page in form of String 
+
+getWindowHandle():String ==> this will return the window id of the tab / window on which webdriver focus is 
+
+			unique id - hexadecicma 0-9 A-F 
+			4F0F565BA32D890AF3BFFDD56DB8F3B0
+			
+getWindowHandles():Set<String> ==> this will return the window ids of alls tabs / windows opened till that point 
+
+							
+----------------------------------------------------
+Day 17 : 14th Feb - Wednesday
+-----------------------------------------------------
+
+manage():Options ==> this is used to manage cookies , window sizes , synchronization etc..
+
+addCookie(Cookie)
+deleteAllCookies()
+deleteCookie(Cookie)
+deleteCookieNamed(String)
+getCookieNamed(String)
+getCookies()
+logs()
+timeouts()
+window():Window 
+    fullscreen()
+	getPosition()
+	getSize()
+	maximize()
+	minimize()
+	setPosition(Point)
+	setSize(Dimension)
+			
+-----------------------------------------------------
+navigate():Navigation
+back()
+forward()
+refresh()
+to(String)  same as get(String)
+to(URL)
+------------------------------------------------------
+
+switchTo():TargetLocator ==> this is used to switch the webdriver focus to 
+an alert or frame or window/tab 
+
+activeElement()
+alert()
+defaultContent()
+frame(int)
+frame(String)
+frame(WebElement)
+newWindow(WindowType)
+parentFrame()
+window(String)
+
+--------------------------------------------------------
+
+findElement(By):WebElement ==> this is to focus on an element
+ using By class object (which is noting but locator)
+ 
+ 
+
+----------------------------------------------------------
+
+findElements(By):List<WebElement>
+----------------------------------------------------------
+
+Locators or Locator Strategy in Selenium
+
+By class static methods which gives By class object 
+
+className(String)
+cssSelector(String)
+id(String)
+linkText(String)
+name(String)
+partialLinkText(String)
+tagName(String)
+xpath(String)
+
+HTML terminology 
+
+
+<tagname attribute1="value of attribute1"
+		 attribute2="value of attribute2"
+		 :
+		 :
+		 attributen="value of attributen">
+		 
+		 
+		 
+<tagname attribute1="value of attribute1"
+		 attribute2="value of attribute2"
+		 :
+		 :
+		 attributen="value of attributen">text on element</tagName>		 
+		 
+
+<input type="text" 
+	  name="username" 
+	  id="username" 
+	  class="login_input" 
+	  value="" fdprocessedid="8x4y2">
+	  
+<a href="Register.php">New User Register Here</a>	  
+	  
+	  
+Locators based on attributes :
+
+id(String)
+name(String)
+className(String)
+
+
+Locators based on link text : 
+
+linkText(String)
+partialLinkText(String)	  
+
+
+Locators based on tagname,attibutes,text 
+
+xpath(String)
+cssSelector(String)
+
+
+<img src="images/home.gif" width="118" height="23" border="0">
+
+Locator based on tagname only 
+
+tagName(String) ==> this is prefered to find mutiple elements   
+
+=============================================
+Methods in WebElement (16 + 5 )
+=============================================
+
+
+clear()
+click()
+findElement(By)
+findElements(By)
+getAttribute(String)
+getCssValue(String)
+getLocation()
+getRect()
+getSize()
+getTagName()
+getText()
+isDisplayed()
+isEnabled()
+isSelected()
+sendKeys(CharSequence...)
+submit()
+
+----------------
+getAccessibleName()
+getAriaRole()
+getDomAttribute(String)
+getDomProperty(String)
+getShadowRoot()
+----------------------
+
+sendKeys(CharSequence...):void ==> this will type the text on WebElement ( textbox,textarea,dropdownetc..)
+
+CharSequence... nothing but String 
+
+------------------
+click():void ==> used to click any WebElement (button , link , img etc ..)
+---------------------
+clear():void ==> used to clear text on WebElement(text,textArea etc  )
+----------------------
+getText():String ==> used to get text present on element ( text in between > and <) 
+--------------------------------------------
+
+							
+----------------------------------------------------
+Day 18 : 16th Feb - Friday
+-----------------------------------------------------
+
+getAttribute(String) : String 
+
+<tagname attribute1="value of attribute1"
+		 attribute2="value of attribute2"
+		 :
+		 :
+		 attributen="value of attributen">
+		 
+		 
+		 
+<tagname attribute1="value of attribute1"
+		 attribute2="value of attribute2"
+		 :
+		 :
+		 attributen="value of attributen">text on element</tagName>		 
+
+case 1: attribute having value 
+o/p : value 
+
+case 2: attribute is not present 
+o/p : null 
+
+case 3: attribute present but value not assigned (mainly used in checkbox and radio button testing)
+o/p : true 
+
+-------------------------------------
+getCssValue(String):String 
+
+
+CSS == > Cascading Style sheets 
+
+-----------------------------------------
+
+getLocation():Point   x,y coordinate of left most corner of web element 
+getSize():Dimension  heigth and width 
+getRect() : x,y,height and width 
+
+------------------------------------------
+
+isDisplayed(): boolean 
+isEnabled():boolean 
+isSelected():boolean (dropdown items , checkbox , radio button etc ..)
+----------------------------------------------
+
+getTagName():String 
+
+----------------------------------------------
+submit():void ==> this is to submit a form directly to server 
+--------------------------------------------------
+
+findElement(By):WebElement 
+findElements(By):List<WebElement> 
+
+
+https://github.com/flm13thdec/SeleniumSeasons
+
+							
+----------------------------------------------------
+Day 19 : 19th Feb - Monday
+-----------------------------------------------------
+
+Links Testing : 
+
+for link 
+
+tagname : a 
+
+mandatory attribute :  "href" 
+
+optional attributes : id,name,class etc ..
+
+
+
+Dropdown Testing : 
+
+								
+								Dropdown Automation
+								
+								
+		1)Conventional way						2)Using Select class 
+
+
+1) Conventional way	: using sendKeys method 
+								
+2) using Select Class (org.openqa.selenium.support.ui)
+
+new Select(WebElement);
+
+selectByIndex(int)
+selectByValue(String)
+selectByVisibleText(String)
+
+
+?????????????????????????????????????/
+Assignment : Dropdown 
+in https://www.facebook.com/
+
+click on "Create new account"
+hint : don't use id of 'Create new account" 
+
+Select your date of birth using 
+1) Conventional way	: using sendKeys method 
+								
+2) using Select Class (org.openqa.selenium.support.ui)
+???????????????????????????????????????????????????????????????
+
+
+
+NoSuchElementException:
+
+Exception in thread "main" org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='birthday_day']"}
+  (Session info: chrome=121.0.6167.185)
+  
+Reason 1 : Element not loaded quickly because of Synchronization 
+
+Solution 1: Use Waits concpet to overcome synchronization
+
+		Thread.sleep(3000);
+
+
+JAVA SEASON - 2
+-----------------------------------------------------
+Day 20: 20th Feb - Tuesday
+-----------------------------------------------------
+
+									Flow Control Satements 	
+						
+						
+	Selection statements					Iterative or Loop 			Transfer or Jump 
+		or
+	Decission Making statements				
+	
+	i) if - else						i)  while()						i) break
+										ii) do while()					ii) continue
+	ii) switch							iii) for()						iii) return 
+										iv)for each loop				iv) try - catch-finally
+																		v) Assert
+																		
+																		
+Syntax :
+
+if(condition or some boolean)
+{
+// statements will be exceuted for true condition 
+
+}		
+else 
+{
+//statements will be exceuted for false condition 
+}																
+
+Syntax : 
+
+
+switch(value/expression)
+{
+
+case value1: statements;
+			  break;
+case value2: statements;
+			  break;
+
+case valuen: statements;
+			break;
+			
+default: 	statements;		
+}
+
+-----------------------------------------------------
+Day 21: 21st Feb - Wednesday
+-----------------------------------------------------
+
+??????????????????????????????????????????????????????????????????
+Assignment:
+
+Use if-else and switch to launch a browser (chrome /firefox/edge )
+according to the input string 
+
+for : e,g 
+
+input string : chrome 
+
+o/p : chrome browser should be launched 
+
+hint : use String equalsIgnoranceCase() to compare the input 
+
+??????????????????????????????????????????????????????????????????
+
+----------------------------------------
+Note : 
+switch case can  take byte , short , int  , char 
+
+Cannot switch on a value of type boolean. Only convertible int values, strings or enum variables are permitted
+Cannot switch on a value of type long. Only convertible int values, strings or enum variables are permitted
+Cannot switch on a value of type float. Only convertible int values, strings or enum variables are permitted
+Cannot switch on a value of type double. Only convertible int values, strings or enum variables are permitted
+
+--------------------------------------------------------
+Iterative or Loop
+
+for loop :
+
+syntax : 
+
+for(intilization ; condition check ; increment or decrement)
+{
+//statements 
+
+}
+
+
+initization;
+
+while (condition check)
+{
+//statements 
+increment or decrement;
+
+}
+
+or 
+
+while (condition check)
+{
+
+
+//statements 
+
+
+}
+
+
+-----------------------------------------------------
+Day 22: 23rd Feb - Friday
+-----------------------------------------------------
+
+do
+{
+
+//statements
+
+}
+while(condition check);
+
+
+-----------------------
+for each loop or enhanced for loop 
+
+syntax : 
+
+for(DataType someVariable:collection or ArrayName)
+{
+
+//statements 
+
+}
+
+---------------------------
+Transfer or Jump :
+
+
+break : to exit a loop 
+
+continue : to skip the current iteration 
+
+------------------------------------------
+
+Arrays : 
+
+
+int x=10
+
+int y=20
+
+int z=30
+
+		10	20	30	40	50	60	70	80	90	100
+a		0	1	2	3	4	5	6	7	8	9
+		a[0]						a[6]			a[9]
+		
+	
+syntax :
+
+
+access-specifier modifier datatype arrayName[]={value1,value2,...valuen};
+
+int a[]={10,20,30,..100};
+
+int[] a={10,20,30,..100};
+
+
+-----------------------------------------------------
+Day 23: 24th Feb - Saturday
+-----------------------------------------------------
+
+Arrays using Method 1 : 
+
+access-specifier modifier datatype arrayName[] ; //declaration
+
+arrayName[]={value1,value2 ...valuen}; //assignmnet 
+
+access-specifier modifier datatype arrayName[] ={value1,value2 ...valuen}; //initialization
+
+
+Arrays using Method 2 :  using new operator 
+
+access-specifier modifier datatype arrayName[]=new datatype[no of items ins array];
+
+Definition : 
+
+Array is an indexed collection of fixed no of homogeneous data items / elements 
+
+
+
+for each loop or enhanced for loop 
+
+syntax : 
+
+for(DataType someVariable:collection or ArrayName)
+{
+
+//statements 
+
+}
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 
+Index 5 out of bounds for length 5
+	at feb24th.ArraysDemo5.main(ArraysDemo5.java:14)
+
+Disadvantages of Arrays :
+
+1)Arrays are fixed length , No growable nature 
+
+2)Hetrogenous items are not allowed
+
+Type mismatch: cannot convert from double to int
+
+
+3) Predefined or readymade methods are not available 
+
+
+Collections Framework:
+
+
+							Iterable(I)
+							
+								
+							Collection(I)
+
+
+				List(I)				Queue(I)			Set(I)
+				
+				- ArrayList(C)							- HashSet(C)
+				- LinkedList(C)							- LinkedHashSet(C)
+				- Vector(C)								- SortedSet(I)
+				- Stack(C)								- TreeSet(C)
+							
+								
+
+Collection(I):
+
+add(E):boolean 
+
+here E is element of any datatype 
+
+contains(Object):boolean 
+
+isEmpty():boolean 
+
+size():int [ no of items present in collection ]
+
+remove(Object):boolean 
+
+
+List(I)	: 
+
+add(int, E) : void 
+
+get(int):E 
+
+here parameter int represents the index of the Element 
+
+subList(int, int):List<E> 
+
+
+ArrayList(C):
+
+ArrayList()
+ArrayList(int)
+ArrayList(Collection<? extends E>)
+
+new ArrayList(); ==> this will create an ArrayList having default capacity 10 
+
+
+-----------------------------------------------------
+Day 24: 26th Feb - Monday
+-----------------------------------------------------
+
+ArrayList(C):
+
+Initial capacity of ArrayList is 10 
+
+Default implement or data structure is Array 
+
+
+	New Capacity = (Current Capacity * 3/ 2 ) + 1
+	
+Note : 
+
+to makee type safety like Arrays concept , we can use generics in collection framework 
+
+new ArrayList<Type>();
+
+Here Type can be any datatype
+
+findElements():List<WebElement> 
+
+
+---------------------
+Set(I): 
+
+for unique Elements or unique collection 
+
+This is not indexed based collection , this is done using hashing technique 
+
+HashSet(C):
+
+UnOrdered Collection
+
+Basic or Behind implementation of HAshSet is HashMap 
+
+Constructs a new, empty set; the backing {@code HashMap} instance has
+     * default initial capacity (16) and load factor (0.75).
+
+HashSet()
+HashSet(int)
+HashSet(int, float)
+HashSet(int, float, boolean)
+HashSet(Collection<? extends E>)
+
+
+new HashSet();
+
+default capacity is 16 
+
+Note :
+
+To retrieve data from HastSet , we can either use 
+i) for - each loop
+or
+ii) Iterator 
+
+hasNext():boolean  ==> will check is there any element in next level
+next():E  ==> it will retrive the Element present in next level
+		  ==> moves the cursor or iterator to next level 
+		  
+
+-----------------------------------------------------
+Day 25: 27th Feb - Tuesday
+-----------------------------------------------------
+
+		ArrayList						HashSet
+		
+1. ordered collection				1. UnOrdered Collection (No index concpet here)
+   or Indexed collection   
+   
+2. ArrayList allow duplicate 		2. HashSet doesn't allow duplicates
+	values							 Q : what happens if we add duplicates to HashSet
+									 Ans : nothing happens , just add method will return false 
+3. how to retrive items in ArrayList 3. how to retrive items in HashSet
+	i) for loop (using get method)		i) using For-each loop
+	ii) For-each loop					ii) Iterator
+	iii) Iterator	
+									 
+4. Implementation Structure 		 4. Implementation Structure
+			Array						HashMap
+		
+**************************
+Exception Handling *******
+**************************
+Runtime Error or Exception :
+
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at feb27th.ExceptionDemo1.main(ExceptionDemo1.java:16)
+	
+	
+try   catch finally throw throws 
+
+try
+{
+
+//risky code 
+
+}
+catch(ExceptionClassRefrence or Declaration)
+{
+//handling code or user friendly code 
+}	
+
+
+combinations :
+
+try catch 
+
+try catch catch ...
+
+try finally 
+
+try catch finally 
+
+try catch catch ... finally 
+
+
+Methods in Throwable Class :
+
+getMessage():String ==> message of the excpetion 
+
+printStackTrace(): void ==> this will print the whole Excweption details in console 
+
+---------------------------
+throw : 
+
+used to create customized or user defined exception 
+
+
+
+-----------------------------------------------------
+Day 25: 27th Feb - Tuesday
+-----------------------------------------------------
+
+
+								
+							Exceptions
+
+
+		1)Predefined 					2)User-defined
+		
+		- ArithmeticException				- InvalidAgeException
+		- NullPointerException
+		- NoSuchElementException	
+								
+								
+					***		Exceptions
+
+
+		1)Checked										2)UnChecked 
+								
+if compiler can check or anticipate the exception 	if compiler can't check or anticipate the exception 
+
+InterruptedException								e.g ArithmeticException
+FileNotFoundException									NullPointerException
+
+-> can be overcome using try catch or throws 		 -> we should handle it using try catch
+-> throws is prefered 											
+								
+								
+							
+							
+**************************************************************************
+Selenium Season - 2 
+**************************************************************************
+
+to find no of links in a webpage ?
+
+<a href="Register.php">New User Register Here</a>
+
+<a href="ForgotPassword.php">Forgot Password?</a>
+
+<a href="mailto:info@adactin.com">info@adactin.com</a>
+
+
+findElements(By):List<WebElement>
+
+findElements(By.tagName("a"))
+								
+
+?????????????????????????????????????????????????????????????
+Assignment 
+
+Find no of links in 
+
+https://www.yupptv.com/ homepage and print them 
+
+and also no	links in "Popular Shows" module and print them 
+
+???????????????????????????????????????????????????????????????					
+
+
+-----------------------------------------------------
+Day 27: 1st Mar - Friday
+-----------------------------------------------------
+
+
+Exception in thread "main" org.openqa.selenium.StaleElementReferenceException:
+ stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.71)
+  
+  
+StaleElementReferenceException:
+
+Reason : The refrence or the address to WebElement is changed due to change DOM (document object model) structure
+
+Solution : to get the new references 
+===============================================================
+To get items in dropdown 
+
+Technique 1 : old technique
+
+First focus on WebElement (dropdown)
+and use findElements using locator strategy tagname "option"
+
+
+Technique 2 : using Select class (org.openqa.selenium.support.ui)
+
+Select : 
+
+getOptions():List<WebElement> 
+
+-----------------------------------------------------------------------
+							Frameworks 
+							
+							
+							
+				1) predefined							2)User defined 
+
+
+				- Junit										- Data Driven
+				- TestNG									- Keyword Driven
+				- NUnit										- BDD Behaviour Driven 
+				- PyTest
+				
+		
+
+	TestNG ( Test Next Generation)	
+							
+TestNG : JUnit + NUnit 							
+							
+	
+https://theautomationzone.blogspot.com/2020/07/basic-dropdown.html
+	
+	
+
+-----------------------------------------------------
+Day 27: 2nd Mar - Saturday
+-----------------------------------------------------
+
+https://rahulshettyacademy.com/AutomationPractice/
+
+
+
+TestNG (Cont ...)
+
+-> how to add TestNG Library to our project after installation of plugin (from Eclipse Marketplace)
+
+Ans : after writing @Test in testscript , for one time mousehover on @Test annotation , then click on "Add TestNG"
+
+	
+	
+Annotations in TestNG:
+
+@Test means the Test Case Steps 
+
+@BeforeMethod --> this method will be excuted before each  and every @Test annotated method 
+
+@AfterMethod --> this methd  will be excuted After each  and every @Test annotated method 
+
+Note : 
+
+when a class have more than one @Test methods 
+
+execution will be in Alphabetic order of method names
+
+If you want to avoid Alphabetic order then user priority paramter in @Test 
+
+	@Test(priority=1)
+	
+https://github.com/flm13thdec/SeleniumSeasons	
+
+
+-----------------------------------------------------
+Day 28: 4th Mar - Monday
+-----------------------------------------------------
+
+
+Xpath 		or cssSelector are powerful locator strategies 
+
+
+Xpath : XML path 
+
+It's a query language to find XML nodes in XML document.
+
+we can use Xpath to find even HTML nodes , since HTML is an implementation of XML . 
+
+							Xpath
+						
+						
+						
+		Absolute Xpath					Relative Xpath	
+
+	writing xpath from 					 writing xpath other than root (html)
+	from root node 	(html)
+	
+-> Not prefered because of indexes    	
+						
+/html/body/table[2]/tbody/tr/td[2]/form/table/tbody/tr[2]/td[2]/input
+
+/html/body/table[2]/tbody/tr/td[2]/form/table/tbody/tr[2]/td[2]/input						
+						
+/html/body/div/div/div/div/div/div/div[2]/div/div/form/div[5]/a
+/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[5]/a						
+						
+
+****************************************						
+Xpath Writing Techniques 		
+****************************************
+
+HTML terminology 
+
+
+<tagname attribute1="value of attribute1"
+		 attribute2="value of attribute2"
+		 :
+		 :
+		 attributen="value of attributen">
+		 
+		 
+		 
+<tagname attribute1="value of attribute1"
+		 attribute2="value of attribute2"
+		 :
+		 :
+		 attributen="value of attributen">text on element</tagName>		 
+		 
+
+1) xpath using tagname and attribute 
+
+
+//tagname[@attribute='value of attribute']
+
+<input type="password" name="password" id="password" class="login_input" value="">
+
+//input[@name='password']   1of 1  or //input[@class='login_input' and @type='password']   1 of 1
+
+//input[@class='login_input']  but not this beacuse this is giving 1 0f 2 
+
+
+2) xpath using tagname and text on element 
+
+//tagname[text()='text on element']
+
+<td class="build_title">Important Note:</td>
+
+//td[text()='Important Note:']
+
+3) using contains function 
+
+//tagname[contains(@attribute,'subset of value of attribute')]
+
+//tagname[contains(text(),'subset of text on element')]
+
+
+Mouse Hover : 
+
+
+
+org.openqa.selenium.ElementNotInteractableException: element not interactable
+
+
+Actions --> org.openqa.selenium.interactions
+
+Actions(WebDriver)
+
+moveToElement(WebElement)
+
+perform()

@@ -6,9 +6,9 @@ public class MethodsDemo1 {
 		
 		int num1=10;
 		
-		int res1=0;
+		//int res1=0;
 		
-		res1=num1*(num1+1)/2;
+		int res1=num1*(num1+1)/2;
 		
 		System.out.println("Sum of "+num1+" natural numbers is "+res1);
 		
