@@ -3,7 +3,10 @@ package mar18th;
 public class Clock {
 	
 	int hr,min,sec;
-	
+	public  Clock()
+	{
+		System.out.println("You have Entered Constructor...");
+	}
 	public void setClock(int hr)
 	{
 		this.hr=hr;

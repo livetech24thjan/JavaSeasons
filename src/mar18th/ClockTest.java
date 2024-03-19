@@ -8,6 +8,8 @@ public class ClockTest {
 
 		obj.setClock(4, 15);
 		obj.getClock();
+		
+		
 	}
 
 }
