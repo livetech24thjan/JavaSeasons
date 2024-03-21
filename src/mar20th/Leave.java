@@ -14,5 +14,11 @@ public class Leave extends Marks{
 	{
 		System.out.println("Total Leaves taken "+(sl+cl));
 	}
+	
+	public void getDetails()
+	{
+		System.out.println("Roll No : "+rollNo);
+		System.out.println("Student Name : "+sNa);
+	}
 
 }

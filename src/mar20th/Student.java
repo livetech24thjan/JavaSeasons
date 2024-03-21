@@ -15,5 +15,6 @@ public class Student {
 	{
 		System.out.println("Student Roll No "+rollNo+"  Student Name "+sNa);
 	}
-
+	
+	
 }

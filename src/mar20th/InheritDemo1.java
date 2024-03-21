@@ -13,6 +13,7 @@ public class InheritDemo1 {
 		obj2.setX(20);
 		obj2.setY(30);
 		obj2.prod();
+		
 
 	}
 
